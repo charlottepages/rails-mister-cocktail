@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get '/cocktails', to: 'cocktails#index'
-  post '/cocktails', to: 'cocktails#create'
-  get '/cocktails/new', to: 'cocktails#new'
-  get '/cocktails/:id', to: 'cocktails#show'
+  resources :cocktails, only: %i[index new create show] do
+    resources :doses, only: %i[new create destroy], shallow: true
+  end
 end
