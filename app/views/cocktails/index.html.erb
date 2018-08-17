@@ -1,20 +1,16 @@
-<h1 class="text-center">Summer Coolers</h1>
-
-<%= link_to 'Add New Recipe', new_cocktail_path, class: "btn btn-danger" %>
-
 <div class="container">
   <div class="row">
     <!-- insert <div class="card"> -->
-    <% @cocktails.each do |cocktail| %>
+      <% @cocktails.each do |cocktail| %>
       <div class="col-xs-12 col-sm-4">
-        <%= link_to cocktail do %>
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),url('<%= image_path("cocktail-#{cocktail.id}.jpeg") %>');">
+        <div class="card">
+          <%= link_to '', cocktail, class: "card-link" %>
+          <div class="card-background" style="background-image: linear-gradient(rgba(60,0,0,0.25), rgba(60,0,0,0.15)),url('<%= image_path("cocktail-#{cocktail.id}.jpeg") %>');"></div>
           <div class="card-description">
             <h2 class="text-center"><%= cocktail.name %></h2>
           </div>
-          </div>
-        <% end %>
+        </div>
       </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
-</div>
