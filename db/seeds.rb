@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Ingredient.destroy_all
-Cocktail.destroy_all
+# Cocktail.destroy_all
 [
   'Combava lemon',
   'Crushed watermelon cubes',
@@ -29,11 +29,11 @@ Cocktail.destroy_all
   Ingredient.create(name: ingredient)
 end
 
-[
-  'Fresh Watermelon Sour',
-  'Grapefruit Margarita',
-  'Blueberry Thyme Crush',
-  'Strawberry Spritz'
-].each do |title|
-  Cocktail.create(name: title)
-end
+# [
+#   'Fresh Watermelon Sour',
+#   'Grapefruit Margarita',
+#   'Blueberry Thyme Crush',
+#   'Strawberry Spritz'
+# ].each do |title|
+#   Cocktail.create(name: title)
+# end
